@@ -72,9 +72,12 @@
 
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Sign up <a href="{{ route('signin') }}"></button>
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+                        <div class="d-flex pb-4 mt-2 ">
+                            <p style="font-size:14px;" class="text-dark ml-4">Already Have an Accout ? <a href="{{ route('signin') }}">Log in</a> </p>
+                        </div>
 
-                        <a href="{{ route('signin') }}">Already Have Account? Login Now</a>
+                        {{-- <a href="{{ route('signin') }}">Already Have Account? Login Now</a> --}}
                     </form>
 
                 </div>

@@ -16,6 +16,11 @@ class AuthenticateController extends Controller
     {
         return view('authenticate.signin');
     }
+    public function dashboard()
+{
+    return view('authenticate.dashboard');
+
+}
 
 public function register(Request $request)
 {
@@ -30,7 +35,10 @@ public function register(Request $request)
         
     ]);
 
-    // if ($user) {
+     if ($user) 
+     {
+        return redirect('signin')->with('Register succefully');
+    }
     //     dd("User created successfully");
     // } else {
     //     dd("User created Failed");
@@ -45,13 +53,15 @@ public function login(Request $request)
 
 
 if (Auth::attempt($login)){
-    return redirect('login')->with('login succefully');
+    return redirect('dashboard')->with('login succefully');
 
 }
-dd("Login Failed");
-return redirect('login')->with('error','Opps! You have entered invalid credentials');
+// dd("Login Failed");
+// return redirect('login')->with('error','Opps! You have entered invalid credentials');
 
 }
+
+
 public function logout(Request $request)
     {
         Auth::logout();

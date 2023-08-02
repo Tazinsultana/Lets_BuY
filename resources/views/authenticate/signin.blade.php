@@ -19,7 +19,7 @@
         <div class="row">
             <div class="card-group mt-4 ">
             <div class="card pe-3">
-                <img src="{{asset('assets/image/logo1.jpg')}}" alt="Image" class="img-fluid">
+                <img src="{{asset('assets/image/logo2.jpg')}}" alt="Image" class="img-fluid">
 
 
             </div>
