@@ -16,9 +16,14 @@ class AuthenticateController extends Controller
     {
         return view('authenticate.signin');
     }
-    public function dashboard()
+//     public function dashboard()
+// {
+//     return view('authenticate.dashboard');
+
+// }
+public function Main()
 {
-    return view('authenticate.dashboard');
+    return view('layout.Main');
 
 }
 
@@ -53,7 +58,7 @@ public function login(Request $request)
 
 
 if (Auth::attempt($login)){
-    return redirect('dashboard')->with('login succefully');
+    return redirect('Main')->with('login succefully');
 
 }
 // dd("Login Failed");
