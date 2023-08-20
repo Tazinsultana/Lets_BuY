@@ -58,7 +58,13 @@ public function login(Request $request)
 
 
 if (Auth::attempt($login)){
+
+    // dd("User created successfully");
+      
+    
+
     return redirect('Main')->with('login succefully');
+
 
 }
 // dd("Login Failed");
@@ -72,4 +78,4 @@ public function logout(Request $request)
         Auth::logout();
         return redirect('login');
     }
-}
+ }
